@@ -1,7 +1,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Kapil inania</title>
+  <title>css tools</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -393,14 +393,53 @@ body {
 }
 .countdown {
     display: flex;
-	color: white;
+	color: rgb(249, 229, 9);
 	position: absolute;
 	border: 0px solid red;
 }
 
 .timer {
-    font-size: 4em;
+    font-size: 5em;
     margin: 0 10px;
+}
+.count_downname{
+	color: white;
+	position: absolute;
+	top: 250px;
+	font-size: 80px;
+}
+.pause-btn, .settings-btn{
+	display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .countdown {
+	width: 80%;
+	margin: auto;
+    display: flex;
+	color: rgb(249, 229, 9);
+	position: absolute;
+	border: 0px solid red;
+	text-align: center;
+	font-size: 15px;
+  }
+
+  .timer {
+	width: 90%;
+	margin: auto;
+	font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  .count_downname{
+	width: 90%;
+	margin: auto;
+	color: white;
+	position: absolute;
+	top: 120px;
+	font-size: 50px;
+	border: 0px solid red;
+	text-align: center;
+}
 }
 </style>
 
@@ -442,14 +481,14 @@ body {
 			<canvas id="trails-canvas"></canvas>
 			<canvas id="main-canvas"></canvas>
 		</div>
-		<div class="controls">
-			<div class="btn pause-btn">
+		<div class="controls" >
+			<div class="btn pause-btn" hidden>
 				<svg fill="white" width="24" height="24"><use href="#icon-pause" xlink:href="#icon-pause"></use></svg>
 			</div>
 			<div class="btn sound-btn">
 				<svg fill="white" width="24" height="24"><use href="#icon-sound-off" xlink:href="#icon-sound-off"></use></svg>
 			</div>
-			<div class="btn settings-btn">
+			<div class="btn settings-btn" hidden>
 				<svg fill="white" width="24" height="24"><use href="#icon-settings" xlink:href="#icon-settings"></use></svg>
 			</div>
 		</div>
@@ -509,10 +548,11 @@ body {
 		</div>
 	</div>
 
-	
+	<div class="count_downname">
+		<h1>Collection Of CSS Styles At One Place.</h1>
+	</div>
 	
 	<div class="countdown" id="countdown">
-		
 		<div class="timer" id="days"></div>
 		<div class="timer" id="hours"></div>
 		<div class="timer" id="minutes"></div>
